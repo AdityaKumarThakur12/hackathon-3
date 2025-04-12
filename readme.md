@@ -1,13 +1,3 @@
-# 🚀 Anti-Resume Job Platform
-
-> *Redefining hiring for the bold, the brilliant, and the underestimated.*
-
-This isn't just another job portal. It's a **rebellion** against resumes, keywords, and hiring biases. Candidates prove themselves through **real-world challenges**, and companies post **real tasks**, not vague HR fluff.
-
-No more keyword-stuffed resumes. No more guessing culture fits. No more hidden salaries. This is **hiring reimagined**.
-
----
-
 ## 🧠 Platform Variants
 
 We built **two powerful versions** of the Anti-Resume Job Platform to test the limits of modern tech stacks. Both share the same bold philosophy, but differ under the hood:
@@ -30,6 +20,18 @@ We built **two powerful versions** of the Anti-Resume Job Platform to test the l
 
 
 ---
+
+# 🚀 Anti-Resume Job Platform
+
+> *Redefining hiring for the bold, the brilliant, and the underestimated.*
+
+This isn't just another job portal. It's a **rebellion** against resumes, keywords, and hiring biases. Candidates prove themselves through **real-world challenges**, and companies post **real tasks**, not vague HR fluff.
+
+No more keyword-stuffed resumes. No more guessing culture fits. No more hidden salaries. This is **hiring reimagined**.
+
+---
+
+
 
 ## 🔧 Tech Stack Comparison
 
