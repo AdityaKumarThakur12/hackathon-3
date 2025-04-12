@@ -17,6 +17,11 @@ A full-stack MERN (MongoDB, Express, React, Node.js) web platform designed to fl
 - MongoDB (Mongoose)
 - JSON Web Tokens (JWT)
 
+---
+- FrontEnd Link : 🚀 [Live Demo (MERN Version)](https://antiresume.netlify.app/)
+- BackEnd Link : 🚀 [Live Demo (MERN Version)](https://hackathon-unit5.onrender.com/api/)
+---
+
 ## 📁 Project Structure
 
 ### Backend

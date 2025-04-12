@@ -17,12 +17,17 @@ We built **two powerful versions** of the Anti-Resume Job Platform to test the l
 - Built for speed and simplicity using **Firebase**.
 - Features real-time DB, Auth, and AI integrations.
 - Ideal for rapid prototyping, instant deploys, and zero backend headaches.
+- 🚀 [Live Demo (Firebase Version)](https://cilio.netlify.app/)
 
 ### 🛠️ Version 2: Full-Stack MERN
 
 - Custom built using the **MERN stack**: MongoDB, Express, React, Node.js.
 - Offers deep control over APIs, database logic, and scalable backend features.
 - Perfect for complex workflows, enterprise control, and granular user roles.
+- FrontEnd Link : 🚀 [Live Demo (MERN Version)](https://antiresume.netlify.app/)
+- BackEnd Link : 🚀 [Live Demo (MERN Version)](https://hackathon-unit5.onrender.com/api/)
+
+
 
 ---
 
