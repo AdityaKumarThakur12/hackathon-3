@@ -1,4 +1,4 @@
-## 🧠 Platform Variants
+# 🧠 Platform Variants
 
 We built **two powerful versions** of the Anti-Resume Job Platform to test the limits of modern tech stacks. Both share the same bold philosophy, but differ under the hood:
 
