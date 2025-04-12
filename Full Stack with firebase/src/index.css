@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --animate-move: move 5s linear infinite;
+ 
+  @keyframes move {
+    0% {
+      transform: translateX(-200px);
+    }
+    100% {
+      transform: translateX(200px);
+    }
+  }
+}
+
+
+.neon-border {
+  box-shadow: 0 0 10px #ec4899, 0 0 20px #ec4899, 0 0 30px #ec4899;
+  border: 1px solid #ec4899;
+}
+
+.neon-text {
+  text-shadow: 0 0 5px #ec4899, 0 0 10px #ec4899, 0 0 15px #ec4899;
+}
+
+
