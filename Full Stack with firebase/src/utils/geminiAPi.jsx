@@ -20,7 +20,7 @@ export async function getGeminiFeedback(prompt) {
   
       const data = await response.json();
   
-      console.log('Gemini Response:', data);
+     
   
       if (data.error) {
         return `Gemini Error: ${data.error.message}`;

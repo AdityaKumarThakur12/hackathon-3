@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import StarBorder from '../components/button';
 import { motion } from 'framer-motion';
 import { Menu, X, Github, Linkedin, Twitter, Brain, Code, Target } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useNavigate } from 'react-router-dom';
 import {
   ChartBarIcon,
   ShieldCheckIcon,
@@ -16,6 +18,7 @@ import SplashCursor from '../components/cursor';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
@@ -70,9 +73,9 @@ function App() {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Navbar */}
       <div className='-z-20'>
-      <SplashCursor/>
+        <SplashCursor />
       </div>
-     
+
       <nav className="bg-gray-800/50 backdrop-blur-lg fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -86,10 +89,26 @@ function App() {
 
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link to="/" className="hover:text-gray-300 transition duration-300">Home</Link>
-                <Link to="/interviewee/login" className="hover:text-gray-300 transition duration-300">Interviewee Login</Link>
-                <Link to="/interviewee" className="hover:text-gray-300 transition duration-300">Interviewee Dashboard</Link>
-                <Link to="/interviewee/results" className="hover:text-gray-300 transition duration-300">Results</Link>
+                <StarBorder
+                  as="button"
+                  className="custom-class"
+                  color="cyan"
+                  speed="3s"
+                  onClick={() => navigate('/interviewee/login')}
+                >
+                  Interviewee Login
+                </StarBorder>
+                <StarBorder
+                  as="button"
+                  className="custom-class"
+                  color="cyan"
+                  speed="3s"
+                  onClick={() => navigate('/recruiter/login')}
+                >
+                  Recruiter Login
+                </StarBorder>
+
+
               </div>
             </div>
 
@@ -113,10 +132,24 @@ function App() {
             className="md:hidden bg-gray-800"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</Link>
-              <Link to="/features" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Features</Link>
-              <Link to="/pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Pricing</Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+              <StarBorder
+                as="button"
+                className="custom-class"
+                color="cyan"
+                speed="3s"
+                onClick={() => navigate('/interviewee/login')}
+              >
+                Interviewee Login
+              </StarBorder>
+              <StarBorder
+                as="button"
+                className="custom-class"
+                color="cyan"
+                speed="3s"
+                onClick={() => navigate('/recruiter/login')}
+              >
+                Recruiter Login
+              </StarBorder>
             </div>
           </motion.div>
         )}
@@ -155,18 +188,18 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-             <Link
-              to="/interviewee/login"
-              className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg"
-            >
-              Showcase Your Skills
-            </Link>
-            <Link
-              to="/recruiter/login"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg"
-            >
-              Find Real Talent
-            </Link>
+              <Link
+                to="/interviewee/login"
+                className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg"
+              >
+                Showcase Your Skills
+              </Link>
+              <Link
+                to="/recruiter/login"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg"
+              >
+                Find Real Talent
+              </Link>
             </motion.div>
           </div>
 
@@ -413,7 +446,7 @@ function App() {
             </div>
           </motion.section>
 
-         
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

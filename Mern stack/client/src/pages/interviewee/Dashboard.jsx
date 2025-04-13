@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; // Import Link for navigation
 import { useEffect, useState } from "react";
 import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +9,7 @@ import {
   ClockIcon,
   ChartBarIcon,
   ArrowPathIcon,
+  XCircleIcon,
 } from "@heroicons/react/24/outline";
 
 export default function IntervieweeDashboard() {
@@ -54,6 +56,22 @@ export default function IntervieweeDashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 p-8">
       <div className="max-w-6xl mx-auto">
+        {/* Navigation Links */}
+        <div className="flex justify-between items-center mb-6">
+          <Link
+            to="/"
+            className="text-indigo-600 hover:text-indigo-800 font-semibold transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            to="/interviewee/results"
+            className="text-indigo-600 hover:text-indigo-800 font-semibold transition-colors"
+          >
+            Results
+          </Link>
+        </div>
+
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           {/* Header Section */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-8 text-white">
@@ -62,8 +80,10 @@ export default function IntervieweeDashboard() {
                 <BriefcaseIcon className="w-8 h-8" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold">Opportunity Board</h1>
-                <p className="mt-2 opacity-90">
+                <h1 className="text-3xl font-bold animate-fade-in">
+                  Opportunity Board
+                </h1>
+                <p className="mt-2 opacity-90 animate-slide-up">
                   Find your next career challenge
                 </p>
               </div>
@@ -75,7 +95,7 @@ export default function IntervieweeDashboard() {
             {positions.map((pos) => (
               <div
                 key={pos._id}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -120,7 +140,7 @@ export default function IntervieweeDashboard() {
                         </div>
                         <div className="flex items-center gap-4 text-sm text-gray-600">
                           <div className="flex items-center gap-1">
-                            <ClockIcon className="w-4 h-4" />~
+                            <ClockIcon className="w-4 h-4" />~{" "}
                             {pos.challenges[0].duration || 45} mins
                           </div>
                           <div className="flex items-center gap-1">
@@ -167,13 +187,25 @@ export default function IntervieweeDashboard() {
 
           {positions.length === 0 && (
             <div className="text-center py-12">
-              <div className="text-gray-400 mb-4">🎯</div>
+              <div className="text-gray-400 mb-4 animate-bounce">🎯</div>
               <p className="text-gray-500">
                 No open positions available at the moment
               </p>
               <p className="text-sm text-gray-400 mt-2">Check back later!</p>
             </div>
           )}
+        </div>
+
+        {/* Additional Section */}
+        <div className="mt-12 bg-gradient-to-r from-purple-50 to-indigo-50 p-8 rounded-2xl shadow-lg">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Why Choose Us?
+          </h2>
+          <p className="text-gray-600">
+            We provide a platform to connect talented individuals with
+            top-notch companies. Explore opportunities, take challenges, and
+            grow your career with us.
+          </p>
         </div>
       </div>
     </div>
